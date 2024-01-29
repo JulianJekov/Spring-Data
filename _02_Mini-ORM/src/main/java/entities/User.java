@@ -17,11 +17,16 @@ public class User {
     @Column(name = "registration_date")
     private LocalDate registration;
 
+    public User() {
+    }
+
+
     public User(String username, int age, LocalDate registration) {
         this.username = username;
         this.age = age;
         this.registration = registration;
     }
+
 
     public long getId() {
         return id;
