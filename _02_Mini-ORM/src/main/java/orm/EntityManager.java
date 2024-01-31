@@ -21,64 +21,7 @@ public class EntityManager<E> implements DBContext<E> {
         this.connection = connection;
     }
 
-    private <E> void doAlter(Class entity) throws SQLException {
-        List<String> columnsToAdd = new ArrayList<>();
-        Field[] fields = entity.getDeclaredFields();
 
-        for (int i = 0; i < fields.length; i++) {
-            Field field = fields[i];
-            field.setAccessible(true);
-
-            if (!this.checkIfColumnExist(field, entity)) {
-                columnsToAdd.add(this.getColumnName(field) + " " + this.getDBType(field));
-            }
-        }
-        String query = String.format("alter table %s add %s", this.getTableName(entity), String.join(",", columnsToAdd));
-
-        connection.prepareStatement(query).execute();
-    }
-
-    private <E> void doCreate(Class entity) throws SQLException {
-        String query = String.format("create table %s (", getTableName(entity));
-        Field[] fields = entity.getDeclaredFields();
-        StringBuilder columnDefinition = new StringBuilder();
-
-        for (int i = 0; i < fields.length; i++) {
-            Field field = fields[i];
-            field.setAccessible(true);
-            String dbType = this.getDBType(field);
-            columnDefinition.append(this.getColumnName(field)).append(" ").append(dbType);
-
-            if (field.isAnnotationPresent(Id.class)) {
-                columnDefinition.append(" primary key auto_increment");
-            }
-
-            if (i < fields.length - 1) {
-                columnDefinition.append(",").append(System.lineSeparator());
-            }
-        }
-        query += columnDefinition + ")";
-        connection.prepareStatement(query).execute();
-    }
-
-    private String getDBType(Field field) {
-        String result = "";
-        switch (field.getType().getSimpleName()) {
-            case "int":
-            case "Integer":
-            case "long":
-            case "Long":
-                result = "int";
-                break;
-            case "String":
-                result = "varchar(50)";
-                break;
-            case "LocalDate":
-                result = "datetime";
-                break;
-        }
-        return result;
-    }
 
     @Override
     public boolean persist(E entity) throws SQLException, IllegalAccessException {
@@ -214,6 +157,65 @@ public class EntityManager<E> implements DBContext<E> {
         return this.connection.prepareStatement(query).execute();
     }
 
+    private <E> void doAlter(Class entity) throws SQLException {
+        List<String> columnsToAdd = new ArrayList<>();
+        Field[] fields = entity.getDeclaredFields();
+
+        for (int i = 0; i < fields.length; i++) {
+            Field field = fields[i];
+            field.setAccessible(true);
+
+            if (!this.checkIfColumnExist(field, entity)) {
+                columnsToAdd.add(this.getColumnName(field) + " " + this.getDBType(field));
+            }
+        }
+        String query = String.format("alter table %s add %s", this.getTableName(entity), String.join(",", columnsToAdd));
+
+        connection.prepareStatement(query).execute();
+    }
+
+    private <E> void doCreate(Class entity) throws SQLException {
+        String query = String.format("create table %s (", getTableName(entity));
+        Field[] fields = entity.getDeclaredFields();
+        StringBuilder columnDefinition = new StringBuilder();
+
+        for (int i = 0; i < fields.length; i++) {
+            Field field = fields[i];
+            field.setAccessible(true);
+            String dbType = this.getDBType(field);
+            columnDefinition.append(this.getColumnName(field)).append(" ").append(dbType);
+
+            if (field.isAnnotationPresent(Id.class)) {
+                columnDefinition.append(" primary key auto_increment");
+            }
+
+            if (i < fields.length - 1) {
+                columnDefinition.append(",").append(System.lineSeparator());
+            }
+        }
+        query += columnDefinition + ")";
+        connection.prepareStatement(query).execute();
+    }
+
+    private String getDBType(Field field) {
+        String result = "";
+        switch (field.getType().getSimpleName()) {
+            case "int":
+            case "Integer":
+            case "long":
+            case "Long":
+                result = "int";
+                break;
+            case "String":
+                result = "varchar(50)";
+                break;
+            case "LocalDate":
+                result = "datetime";
+                break;
+        }
+        return result;
+    }
+
     private List<String> getColumnsValuesWithoutId(E entity) throws IllegalAccessException {
         List<String> values = new ArrayList<>();
 
@@ -271,7 +273,7 @@ public class EntityManager<E> implements DBContext<E> {
         return resultSet.next();
     }
 
-    public boolean checkIfColumnExist(Field field, Class entity) throws SQLException {
+    private boolean checkIfColumnExist(Field field, Class entity) throws SQLException {
         String query = String.format(
                 "select table_name from information_schema.columns " +
                         "where table_schema = 'soft_uni' and table_name = '%s' and column_name = '%s'",
