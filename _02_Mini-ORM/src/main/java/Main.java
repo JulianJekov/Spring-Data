@@ -6,6 +6,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 public class Main {
@@ -15,6 +16,10 @@ public class Main {
         Connection connection = Connector.getConnection();
 
         EntityManager<User> userManager = new EntityManager<>(connection);
+        User user = new User("Second", 30, new Date(), 1000);
+        User user1 = userManager.findFirst(User.class, "id = 2");
+        userManager.delete(user1);
+
 
 
     }

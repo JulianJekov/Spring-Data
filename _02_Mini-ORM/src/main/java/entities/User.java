@@ -5,26 +5,30 @@ import orm.annotations.Entity;
 import orm.annotations.Id;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 @Entity(name = "users")
 public class User {
-    @Id
+    @Id(name = "id")
     private long id;
     @Column(name = "user_name")
     private String username;
     @Column(name = "age")
     private int age;
     @Column(name = "registration_date")
-    private LocalDate registration;
+    private Date registration;
+    @Column(name = "salary")
+    private int salary;
 
     public User() {
     }
 
 
-    public User(String username, int age, LocalDate registration) {
+    public User(String username, int age, Date registration, int salary) {
         this.username = username;
         this.age = age;
         this.registration = registration;
+        this.salary = salary;
     }
 
 
@@ -52,11 +56,11 @@ public class User {
         this.age = age;
     }
 
-    public LocalDate getRegistration() {
+    public Date getRegistration() {
         return registration;
     }
 
-    public void setRegistration(LocalDate registration) {
+    public void setRegistration(Date registration) {
         this.registration = registration;
     }
 }
