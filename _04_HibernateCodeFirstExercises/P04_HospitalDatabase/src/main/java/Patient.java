@@ -34,7 +34,30 @@ public class Patient {
     @OneToMany(targetEntity = Visitation.class, mappedBy = "patient")
     private Set<Visitation> visitations;
 
+    @OneToMany(targetEntity = Diagnose.class, mappedBy = "patient")
+    private Set<Diagnose> diagnoses;
+
+    @OneToMany(targetEntity = Medicament.class, mappedBy = "patient")
+    private Set<Medicament> medicaments;
+
     public Patient() {
+    }
+
+
+    public Set<Diagnose> getDiagnoses() {
+        return diagnoses;
+    }
+
+    public void setDiagnoses(Set<Diagnose> diagnoses) {
+        this.diagnoses = diagnoses;
+    }
+
+    public Set<Medicament> getMedicaments() {
+        return medicaments;
+    }
+
+    public void setMedicaments(Set<Medicament> medicaments) {
+        this.medicaments = medicaments;
     }
 
     public Set<Visitation> getVisitations() {

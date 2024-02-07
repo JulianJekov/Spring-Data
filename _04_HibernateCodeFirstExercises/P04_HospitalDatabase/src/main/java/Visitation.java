@@ -1,5 +1,6 @@
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 @Table(name = "visitations")
@@ -19,26 +20,10 @@ public class Visitation {
     @JoinColumn(name = "patient_id", referencedColumnName = "id")
     private Patient patient;
 
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "diagnose_id", referencedColumnName = "id")
-    private Diagnose diagnose;
-
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "medicament_id", referencedColumnName = "id")
-    private Medicament medicament;
 
     public Visitation() {
     }
 
-
-
-    public Medicament getMedicament() {
-        return medicament;
-    }
-
-    public void setMedicament(Medicament medicament) {
-        this.medicament = medicament;
-    }
 
     public Patient getPatient() {
         return patient;
@@ -46,14 +31,6 @@ public class Visitation {
 
     public void setPatient(Patient patient) {
         this.patient = patient;
-    }
-
-    public Diagnose getDiagnose() {
-        return diagnose;
-    }
-
-    public void setDiagnose(Diagnose diagnose) {
-        this.diagnose = diagnose;
     }
 
     public int getId() {

@@ -15,18 +15,19 @@ public class Diagnose {
     @Column(name = "comments")
     private String comments;
 
-    @OneToMany(targetEntity = Visitation.class, mappedBy = "diagnose")
-    private Set<Visitation> visitations;
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "patient_id", referencedColumnName = "id")
+    private Patient patient;
 
     public Diagnose() {
     }
 
-    public Set<Visitation> getVisitations() {
-        return visitations;
+    public Patient getPatient() {
+        return patient;
     }
 
-    public void setVisitations(Set<Visitation> visitations) {
-        this.visitations = visitations;
+    public void setPatient(Patient patient) {
+        this.patient = patient;
     }
 
     public int getId() {
