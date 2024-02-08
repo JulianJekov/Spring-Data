@@ -23,4 +23,31 @@ public class Driver {
             inverseJoinColumns = @JoinColumn(name = "car_id", referencedColumnName = "id")
     )
     private Set<Car> cars;
+
+    public Driver() {
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public Set<Car> getCars() {
+        return cars;
+    }
+
+    public void setCars(Set<Car> cars) {
+        this.cars = cars;
+    }
 }
