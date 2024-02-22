@@ -1,34 +1,57 @@
-package org.example._07_springdataautomappingobjects;
+package org.example._07_springdataautomappingobjects.entities;
+
+import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity(name = "employees")
 public class Employee {
 
-    private String firstName;
-    private String lastName;
-    private BigDecimal salary;
-    private LocalDate birthday;
-    private Address address;
-    private boolean isOnHoliday;
-    private Employee manager;
-    private Set<Employee> employees;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
-    public Employee(String firstName, String lastName, BigDecimal salary, LocalDate birthday, Address address, boolean isOnHoliday) {
+    @Column(name = "first_name")
+    private String firstName;
+
+    @Column(name = "last_name")
+    private String lastName;
+
+    private BigDecimal salary;
+
+    private LocalDate birthday;
+
+    //private Address address;
+
+    private boolean isOnHoliday;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Employee manager;
+
+//    @OneToMany
+//    private Set<Employee> employees;
+
+
+    public Employee() {
+    }
+
+    public Employee(String firstName, String lastName, BigDecimal salary, LocalDate birthday, boolean isOnHoliday, Employee manager) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;
         this.birthday = birthday;
-        this.address = address;
+//        this.address = address;
         this.isOnHoliday = isOnHoliday;
-        this.employees = new HashSet<>();
+        this.manager = manager;
+//        this.employees = new HashSet<>();
     }
 
-    public void addEmployees(Employee employee) {
-        this.employees.add(employee);
-    }
+//    public void addEmployees(Employee employee) {
+//        this.employees.add(employee);
+//    }
 
     public String getFirstName() {
         return firstName;
@@ -61,14 +84,14 @@ public class Employee {
     public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
+//
+//    public Address getAddress() {
+//        return address;
+//    }
+//
+//    public void setAddress(Address address) {
+//        this.address = address;
+//    }
 
     public boolean isOnHoliday() {
         return isOnHoliday;
@@ -85,12 +108,12 @@ public class Employee {
     public void setManager(Employee manager) {
         this.manager = manager;
     }
-
-    public Set<Employee> getEmployees() {
-        return employees;
-    }
-
-    public void setEmployees(Set<Employee> employees) {
-        this.employees = employees;
-    }
+//
+//    public Set<Employee> getEmployees() {
+//        return employees;
+//    }
+//
+//    public void setEmployees(Set<Employee> employees) {
+//        this.employees = employees;
+//    }
 }

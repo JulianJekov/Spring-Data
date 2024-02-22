@@ -1,4 +1,4 @@
-package org.example._07_springdataautomappingobjects;
+package org.example._07_springdataautomappingobjects.entities;
 
 import java.util.Set;
 import java.util.stream.Collectors;

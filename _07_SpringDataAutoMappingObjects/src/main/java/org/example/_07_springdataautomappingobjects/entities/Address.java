@@ -1,4 +1,4 @@
-package org.example._07_springdataautomappingobjects;
+package org.example._07_springdataautomappingobjects.entities;
 
 public class Address {
     private String street;
