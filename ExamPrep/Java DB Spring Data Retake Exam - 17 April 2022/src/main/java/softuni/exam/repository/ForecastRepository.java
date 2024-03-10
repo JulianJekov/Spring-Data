@@ -13,6 +13,6 @@ public interface ForecastRepository extends JpaRepository<Forecast, Long> {
 
     Optional<Forecast> findByDayOfWeekAndCityId(DayOfWeek dayOfWeek, long city);
 
-
-    List<Forecast> findAllByDayOfWeekIsAndCityPopulationLessThanOrderByMaxTemperatureDescIdAsc(DayOfWeek dayOfWeek, int citizens);
+    List<Forecast> findAllByDayOfWeekIsAndCityPopulationLessThanOrderByMaxTemperatureDescIdAsc
+            (DayOfWeek dayOfWeek, int citizens);
 }

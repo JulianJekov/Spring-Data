@@ -1,7 +1,6 @@
 package softuni.exam.models.entity;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "cities")
@@ -23,8 +22,6 @@ public class City {
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private Country country;
 
-    @OneToMany(targetEntity = Forecast.class, mappedBy = "city")
-    private List<Forecast> forecasts;
 
     public City() {
     }

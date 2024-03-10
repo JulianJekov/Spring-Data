@@ -10,27 +10,26 @@ import softuni.exam.util.ValidatorUtilImpl;
 import softuni.exam.util.XmlParser;
 import softuni.exam.util.XmlParserImpl;
 
-// TODO:
 @Configuration
 public class ApplicationBeanConfiguration {
 
     @Bean
-    public Gson gson () {
+    public Gson gson() {
         return new GsonBuilder().setPrettyPrinting().create();
     }
 
     @Bean
-    public XmlParser xmlParser () {
+    public XmlParser xmlParser() {
         return new XmlParserImpl();
     }
 
     @Bean
-    public ModelMapper modelMapper () {
+    public ModelMapper modelMapper() {
         return new ModelMapper();
     }
 
     @Bean
-    public ValidatorUtil validatorUtil () {
+    public ValidatorUtil validatorUtil() {
         return new ValidatorUtilImpl();
     }
 }

@@ -49,27 +49,27 @@ public class CountryServiceImpl implements CountryService {
 
     @Override
     public String importCountries() throws IOException {
-        String json = this.readCountriesFromFile();
-        CountriesImportDto[] countriesImportDto = gson.fromJson(json, CountriesImportDto[].class);
+        final String json = this.readCountriesFromFile();
+        final CountriesImportDto[] countriesImportDto = gson.fromJson(json, CountriesImportDto[].class);
         return Arrays.stream(countriesImportDto)
                 .map(this::importCountry)
                 .collect(Collectors.joining("\n"));
     }
 
     private String importCountry(CountriesImportDto dto) {
-        boolean isValid = this.validatorUtil.isValid(dto);
+        final boolean isValid = this.validatorUtil.isValid(dto);
 
         if (!isValid) {
             return INVALID_COUNTRY;
         }
 
-        Optional<Country> optionalCountry = this.countryRepository.findByCountryName(dto.getCountryName());
+        final Optional<Country> optionalCountry = this.countryRepository.findByCountryName(dto.getCountryName());
 
         if(optionalCountry.isPresent()) {
             return INVALID_COUNTRY;
         }
 
-        Country country = this.modelMapper.map(dto, Country.class);
+        final Country country = this.modelMapper.map(dto, Country.class);
 
         this.countryRepository.saveAndFlush(country);
 

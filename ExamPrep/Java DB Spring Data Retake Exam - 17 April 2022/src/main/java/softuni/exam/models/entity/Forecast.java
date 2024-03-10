@@ -1,7 +1,6 @@
 package softuni.exam.models.entity;
 
 import javax.persistence.*;
-import java.sql.Time;
 import java.time.LocalTime;
 
 @Entity
@@ -94,10 +93,14 @@ public class Forecast {
     @Override
     public String toString() {
         return String.format("City: %s%n" +
-                "-min temperature: %.2f%n" +
-                "--max temperature: %.2f%n" +
-                "---sunrise: %s%n" +
-                "----sunset: %s%n", this.city.getCityName(), this.minTemperature, this.maxTemperature,
-                this.sunrise.toString(), this.sunset.toString());
+                        "-min temperature: %.2f%n" +
+                        "--max temperature: %.2f%n" +
+                        "---sunrise: %s%n" +
+                        "----sunset: %s%n",
+                this.city.getCityName(),
+                this.minTemperature,
+                this.maxTemperature,
+                this.sunrise.toString(),
+                this.sunset.toString());
     }
 }

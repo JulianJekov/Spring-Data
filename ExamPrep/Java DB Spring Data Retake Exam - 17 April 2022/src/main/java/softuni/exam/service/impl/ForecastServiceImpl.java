@@ -56,8 +56,8 @@ public class ForecastServiceImpl implements ForecastService {
     @Override
 
     public String importForecasts() throws IOException, JAXBException {
-        String xml = XML_FORECASTS_PATH.toAbsolutePath().toString();
-        ForecastsImportRootDto forecastsImportRootDto = xmlParser.convertFromFile(xml, ForecastsImportRootDto.class);
+        final String xml = XML_FORECASTS_PATH.toAbsolutePath().toString();
+        final ForecastsImportRootDto forecastsImportRootDto = xmlParser.convertFromFile(xml, ForecastsImportRootDto.class);
         return forecastsImportRootDto.getForecasts()
                 .stream()
                 .map(this::importForecast)
@@ -65,19 +65,19 @@ public class ForecastServiceImpl implements ForecastService {
     }
 
     private String importForecast(ForecastImportDto dto) {
-        boolean isValid = this.validatorUtil.isValid(dto);
+        final boolean isValid = this.validatorUtil.isValid(dto);
         if (!isValid) {
             return INVALID_FORECAST;
         }
 
-        Optional<Forecast> optionalForecast = this.forecastRepository.findByDayOfWeekAndCityId(dto.getDayOfWeek(), dto.getCity());
+        final Optional<Forecast> optionalForecast = this.forecastRepository.findByDayOfWeekAndCityId(dto.getDayOfWeek(), dto.getCity());
 
         if (optionalForecast.isPresent()) {
             return INVALID_FORECAST;
         }
 
-        Forecast forecast = this.modelMapper.map(dto, Forecast.class);
-        City city = this.cityRepository.findById(dto.getCity()).get();
+        final Forecast forecast = this.modelMapper.map(dto, Forecast.class);
+        final City city = this.cityRepository.findById(dto.getCity()).get();
         forecast.setCity(city);
 
         this.forecastRepository.saveAndFlush(forecast);
@@ -86,9 +86,9 @@ public class ForecastServiceImpl implements ForecastService {
 
     @Override
     public String exportForecasts() {
-        DayOfWeek sunday = DayOfWeek.SUNDAY;
-        int lessThanCitizens = 150000;
-        List<Forecast> sundayForecastInfo = this.forecastRepository.
+        final DayOfWeek sunday = DayOfWeek.SUNDAY;
+        final int lessThanCitizens = 150000;
+        final List<Forecast> sundayForecastInfo = this.forecastRepository.
                 findAllByDayOfWeekIsAndCityPopulationLessThanOrderByMaxTemperatureDescIdAsc(sunday, lessThanCitizens);
 
         return String.join("\n", sundayForecastInfo.toString());
