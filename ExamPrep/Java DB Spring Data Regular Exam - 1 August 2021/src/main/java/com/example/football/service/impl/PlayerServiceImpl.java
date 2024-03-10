@@ -44,20 +44,20 @@ public class PlayerServiceImpl implements PlayerService {
 
     @Autowired
     public PlayerServiceImpl(PlayerRepository playerRepository,
-                             ValidatorUtil validatorUtil,
-                             XmlParser xmlParser,
-                             ModelMapper modelMapper,
                              TeamRepository teamRepository,
                              TownRepository townRepository,
-                             StatRepository statRepository) {
+                             StatRepository statRepository,
+                             ValidatorUtil validatorUtil,
+                             XmlParser xmlParser,
+                             ModelMapper modelMapper) {
 
         this.playerRepository = playerRepository;
-        this.validatorUtil = validatorUtil;
-        this.xmlParser = xmlParser;
-        this.modelMapper = modelMapper;
         this.teamRepository = teamRepository;
         this.townRepository = townRepository;
         this.statRepository = statRepository;
+        this.validatorUtil = validatorUtil;
+        this.xmlParser = xmlParser;
+        this.modelMapper = modelMapper;
     }
 
     @Override
@@ -72,9 +72,9 @@ public class PlayerServiceImpl implements PlayerService {
 
     @Override
     public String importPlayers() throws JAXBException, FileNotFoundException {
-        String xml = XML_PLAYER_PATH.toAbsolutePath().toString();
+        final String xml = XML_PLAYER_PATH.toAbsolutePath().toString();
 
-        PlayersImportRootDto playersImportRootDto = this.xmlParser.convertFromFile(xml, PlayersImportRootDto.class);
+        final PlayersImportRootDto playersImportRootDto = this.xmlParser.convertFromFile(xml, PlayersImportRootDto.class);
 
         return playersImportRootDto.getPlayers()
                 .stream()
@@ -83,23 +83,23 @@ public class PlayerServiceImpl implements PlayerService {
     }
 
     private String importPlayer(PlayersImportDto dto) {
-        boolean isValid = this.validatorUtil.isValid(dto);
+        final boolean isValid = this.validatorUtil.isValid(dto);
 
         if (!isValid) {
             return INVALID_PLAYER_MESSAGE;
         }
 
-        Optional<Player> optionalPlayer = this.playerRepository.findByEmail(dto.getEmail());
+        final Optional<Player> optionalPlayer = this.playerRepository.findByEmail(dto.getEmail());
 
         if (optionalPlayer.isPresent()) {
             return INVALID_PLAYER_MESSAGE;
         }
 
-        Optional<Team> optionalTeam = this.teamRepository.findByName(dto.getTeam().getName());
-        Optional<Town> optionalTown = this.townRepository.findByName(dto.getTown().getName());
-        Optional<Stat> optionalStat = this.statRepository.findById(dto.getStat().getId());
+        final Optional<Team> optionalTeam = this.teamRepository.findByName(dto.getTeam().getName());
+        final Optional<Town> optionalTown = this.townRepository.findByName(dto.getTown().getName());
+        final Optional<Stat> optionalStat = this.statRepository.findById(dto.getStat().getId());
 
-        Player player = this.modelMapper.map(dto, Player.class);
+        final Player player = this.modelMapper.map(dto, Player.class);
 
         player.setTeam(optionalTeam.get());
         player.setTown(optionalTown.get());
@@ -113,9 +113,9 @@ public class PlayerServiceImpl implements PlayerService {
 
     @Override
     public String exportBestPlayers() {
-        LocalDate after = LocalDate.of(1995, 1, 1);
-        LocalDate before = LocalDate.of(2003, 1, 1);
-        List<Player> bestPlayers =
+        final LocalDate after = LocalDate.of(1995, 1, 1);
+        final LocalDate before = LocalDate.of(2003, 1, 1);
+        final List<Player> bestPlayers =
                 this.playerRepository.
                         findAllByBirthDateAfterAndBirthDateBeforeOrderByStatShootingDescStatPassingDescStatEnduranceDescLastNameAsc
                                 (after, before);
