@@ -60,7 +60,7 @@ public class TownServiceImpl implements TownService {
     }
 
     private String importTown(TownsImportDto dto) {
-        boolean isValid = this.validatorUtil.isValid(dto);
+        final boolean isValid = this.validatorUtil.isValid(dto);
 
         if(!isValid) {
             return INVALID_TOWN_MESSAGE;

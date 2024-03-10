@@ -13,7 +13,8 @@ public class ValidatorUtilImpl implements ValidatorUtil {
     private final Validator validator;
 
     public ValidatorUtilImpl() {
-        this.validator = Validation.buildDefaultValidatorFactory().getValidator();
+        this.validator =
+                Validation.buildDefaultValidatorFactory().getValidator();
     }
 
     @Override

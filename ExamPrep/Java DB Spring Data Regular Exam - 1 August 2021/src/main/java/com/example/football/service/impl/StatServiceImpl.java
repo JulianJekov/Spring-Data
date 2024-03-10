@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.xml.bind.JAXBException;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.Optional;
@@ -50,9 +49,8 @@ public class StatServiceImpl implements StatService {
 
     @Override
     public String importStats() throws JAXBException, IOException {
-        String xml = XML_STATS_PATH.toAbsolutePath().toString();
-
-        StatsImportRootDto statsImportDto =
+        final String xml = XML_STATS_PATH.toAbsolutePath().toString();
+        final StatsImportRootDto statsImportDto =
                 xmlParser.convertFromFile(xml, StatsImportRootDto.class);
 
         return statsImportDto.getStats().stream()
@@ -61,21 +59,21 @@ public class StatServiceImpl implements StatService {
     }
 
     private String importStat(StatsImportDto dto) {
-        boolean isValid = this.validatorUtil.isValid(dto);
+        final boolean isValid = this.validatorUtil.isValid(dto);
 
         if (!isValid) {
             return INVALID_STAT_MESSAGE;
         }
 
-        Optional<Stat> optionalStat =
+        final Optional<Stat> optionalStat =
                 this.statRepository.findByPassingAndShootingAndEndurance
                         (dto.getPassing(), dto.getShooting(), dto.getEndurance());
 
-        if(optionalStat.isPresent()) {
+        if (optionalStat.isPresent()) {
             return INVALID_STAT_MESSAGE;
         }
 
-        Stat stat = this.modelMapper.map(dto, Stat.class);
+        final Stat stat = this.modelMapper.map(dto, Stat.class);
 
         this.statRepository.saveAndFlush(stat);
         return SUCCESSFULLY_IMPORTED_STAT + stat;

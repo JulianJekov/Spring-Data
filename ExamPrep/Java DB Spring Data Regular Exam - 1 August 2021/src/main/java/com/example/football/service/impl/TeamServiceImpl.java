@@ -29,7 +29,7 @@ public class TeamServiceImpl implements TeamService {
     private final ValidatorUtil validatorUtil;
     private final Gson gson;
     private final ModelMapper modelMapper;
-    private TownRepository townRepository;
+    private final TownRepository townRepository;
 
     @Autowired
     public TeamServiceImpl(TeamRepository teamRepository, ValidatorUtil validatorUtil, Gson gson, ModelMapper modelMapper, TownRepository townRepository) {
@@ -52,8 +52,8 @@ public class TeamServiceImpl implements TeamService {
 
     @Override
     public String importTeams() throws IOException {
-        String json = this.readTeamsFileContent();
-        TeamsImportDto[] teamsImportDto = this.gson.fromJson(json, TeamsImportDto[].class);
+        final String json = this.readTeamsFileContent();
+        final TeamsImportDto[] teamsImportDto = this.gson.fromJson(json, TeamsImportDto[].class);
         return Arrays.stream(teamsImportDto)
                 .map(this::importTeam)
                 .collect(Collectors.joining("\n"));
@@ -61,21 +61,21 @@ public class TeamServiceImpl implements TeamService {
 
     private String importTeam(TeamsImportDto dto) {
 
-        boolean isValid = this.validatorUtil.isValid(dto);
+        final boolean isValid = this.validatorUtil.isValid(dto);
 
         if (!isValid) {
             return INVALID_TEAM_MESSAGE;
         }
 
-        Optional<Team> optionalTeam = this.teamRepository.findByName(dto.getName());
+        final Optional<Team> optionalTeam = this.teamRepository.findByName(dto.getName());
 
         if (optionalTeam.isPresent()) {
             return INVALID_TEAM_MESSAGE;
         }
 
-        Optional<Town> town = this.townRepository.findByName(dto.getTownName());
+        final Optional<Town> town = this.townRepository.findByName(dto.getTownName());
 
-        Team team = this.modelMapper.map(dto, Team.class);
+        final Team team = this.modelMapper.map(dto, Team.class);
 
         team.setTown(town.get());
 
