@@ -5,7 +5,76 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5884f67-23b2-45b3-80f5-3372f781e913" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../_04_HibernateCodeFirst/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P01_GringottsDatabase/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P01_GringottsDatabase/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P01_GringottsDatabase/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P01_GringottsDatabase/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P01_GringottsDatabase/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P01_GringottsDatabase/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P01_GringottsDatabase/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P01_GringottsDatabase/src/main/java/WizardDeposits.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P01_GringottsDatabase/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P02_SalesDatabase/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P02_SalesDatabase/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P02_SalesDatabase/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P02_SalesDatabase/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P02_SalesDatabase/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P02_SalesDatabase/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P02_SalesDatabase/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P02_SalesDatabase/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P02_SalesDatabase/src/main/java/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P02_SalesDatabase/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P02_SalesDatabase/src/main/java/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P02_SalesDatabase/src/main/java/Sale.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P02_SalesDatabase/src/main/java/StoreLocation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P02_SalesDatabase/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P03_UniversitySystem/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P03_UniversitySystem/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P03_UniversitySystem/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P03_UniversitySystem/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P03_UniversitySystem/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P03_UniversitySystem/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P03_UniversitySystem/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P03_UniversitySystem/src/main/java/BasePerson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P03_UniversitySystem/src/main/java/Course.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P03_UniversitySystem/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P03_UniversitySystem/src/main/java/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P03_UniversitySystem/src/main/java/Teacher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P03_UniversitySystem/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P04_HospitalDatabase/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P04_HospitalDatabase/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P04_HospitalDatabase/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P04_HospitalDatabase/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P04_HospitalDatabase/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P04_HospitalDatabase/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P04_HospitalDatabase/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P04_HospitalDatabase/src/main/java/Diagnose.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P04_HospitalDatabase/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P04_HospitalDatabase/src/main/java/Medicament.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P04_HospitalDatabase/src/main/java/Patient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P04_HospitalDatabase/src/main/java/Visitation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P04_HospitalDatabase/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P05_BillsPaymentSystem/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P05_BillsPaymentSystem/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P05_BillsPaymentSystem/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P05_BillsPaymentSystem/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P05_BillsPaymentSystem/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P05_BillsPaymentSystem/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P05_BillsPaymentSystem/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P05_BillsPaymentSystem/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P05_BillsPaymentSystem/src/main/java/BankAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P05_BillsPaymentSystem/src/main/java/BillingDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P05_BillsPaymentSystem/src/main/java/CardType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P05_BillsPaymentSystem/src/main/java/CreditCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P05_BillsPaymentSystem/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P05_BillsPaymentSystem/src/main/java/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P05_BillsPaymentSystem/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +84,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2c0DDbzBVF5iFwwmzhX7nnQsnx3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -29,10 +98,24 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/Java/Java/JavaDB/Spring Data/_04_HibernateCodeFirstExercises",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Java\Java\JavaDB\Spring Data\_04_HibernateCodeFirstExercises\src\main\java" />
+      <recent name="E:\Java\Java\JavaDB\Spring Data\_04_HibernateCodeFirstExercises\src" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -50,6 +133,7 @@
       <option name="presentableId" value="Default" />
       <updated>1707239483948</updated>
       <workItem from="1707239484925" duration="19000" />
+      <workItem from="1710257042816" duration="822000" />
     </task>
     <servers />
   </component>
