@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ed12a1ba-5006-454b-9aa0-281d97a42c96" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../_04_HibernateCodeFirstExercises/P06_FootballBetting/src/main/java/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_04_HibernateCodeFirstExercises/P06_FootballBetting/src/main/java/entities/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_04_HibernateCodeFirstExercises/P06_FootballBetting/src/main/java/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_04_HibernateCodeFirstExercises/P06_FootballBetting/src/main/java/entities/Color.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_04_HibernateCodeFirstExercises/P06_FootballBetting/src/main/java/Continent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_04_HibernateCodeFirstExercises/P06_FootballBetting/src/main/java/entities/Continent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_04_HibernateCodeFirstExercises/P06_FootballBetting/src/main/java/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_04_HibernateCodeFirstExercises/P06_FootballBetting/src/main/java/entities/Country.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_04_HibernateCodeFirstExercises/P06_FootballBetting/src/main/java/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_04_HibernateCodeFirstExercises/P06_FootballBetting/src/main/java/entities/Team.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_04_HibernateCodeFirstExercises/P06_FootballBetting/src/main/java/Town.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_04_HibernateCodeFirstExercises/P06_FootballBetting/src/main/java/entities/Town.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_04_HibernateCodeFirstExercises/P06_FootballBetting/src/main/java/enums/Initials.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_04_HibernateCodeFirstExercises/P06_FootballBetting/src/main/java/entities/enums/Initials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/_05_springdataintroexercises/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/_05_springdataintroexercises/ConsoleRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/_05_springdataintroexercises/entities/AgeRestriction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/_05_springdataintroexercises/entities/Author.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/_05_springdataintroexercises/entities/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/_05_springdataintroexercises/entities/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/_05_springdataintroexercises/entities/EditionType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/_05_springdataintroexercises/repositories/AuthorRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/_05_springdataintroexercises/repositories/BookRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/_05_springdataintroexercises/repositories/CategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/_05_springdataintroexercises/services/AuthorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/_05_springdataintroexercises/services/AuthorServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/_05_springdataintroexercises/services/CategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/_05_springdataintroexercises/services/CategoryServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/_05_springdataintroexercises/services/SeedService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/_05_springdataintroexercises/services/SeedServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/files/authors.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/files/books.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/files/categories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/_05_springdataintroexercises/ApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2cH2rknkNijRIccuuQF2lPDu09q" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.Application.executor": "Run",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/Java/Java/JavaDB/Spring Data/_05_SpringDataIntroExercises",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example._05_springdataintroexercises.services" />
+      <recent name="org.example._05_springdataintroexercises.repositories" />
+      <recent name="org.example._05_springdataintroexercises.entities" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="_05_SpringDataIntroExercises" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example._05_springdataintroexercises.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-16.0.2-corretto-16.0.2-f644763e9732-d10d28c9" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-f644763e9732-c0c073db" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed12a1ba-5006-454b-9aa0-281d97a42c96" name="Changes" comment="" />
+      <created>1707754384827</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707754384827</updated>
+      <workItem from="1707754385899" duration="16125000" />
+      <workItem from="1708010794871" duration="2893000" />
+      <workItem from="1710344913062" duration="400000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
