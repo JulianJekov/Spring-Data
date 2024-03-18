@@ -35,4 +35,9 @@ public enum ValidationsAndMessages {
 
     public static final String NO_SUCH_PARAMETER_TYPE = "No such game parameter type: %s";
     public static final String EDITED_GAME_MESSAGE = "Edited %s";
+
+    public static final String ITEM_ADDED_TO_CART = "%s added to cart.";
+    public static final String ITEM_REMOVED_FROM_CART = "%s removed from cart.";
+    public static final String GAME_TITLE_NOT_EXIST = "No such game exist";
+    public static final String ITEMS_BOUGHT = "Successfully bought games: %s";
 }

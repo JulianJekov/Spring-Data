@@ -22,14 +22,13 @@ public class User extends BaseEntity {
     @ManyToMany(fetch = FetchType.LAZY)
     private Set<Game> games;
 
-    @OneToMany(targetEntity = Order.class, mappedBy = "user", fetch = FetchType.LAZY)
-    private Set<Order> orders;
+    @OneToOne()
+    private Order order;
 
     private Boolean isAdmin;
 
     public User() {
         this.games = new HashSet<>();
-        this.orders = new HashSet<>();
     }
 
     public User(String email, String password, String fullName) {
@@ -79,12 +78,12 @@ public class User extends BaseEntity {
         isAdmin = admin;
     }
 
-    public Set<Order> getOrders() {
-        return orders;
+    public Order getOrder() {
+        return order;
     }
 
-    public void setOrders(Set<Order> orders) {
-        this.orders = orders;
+    public void setOrders(Order order) {
+        this.order = order;
     }
 
     @Override

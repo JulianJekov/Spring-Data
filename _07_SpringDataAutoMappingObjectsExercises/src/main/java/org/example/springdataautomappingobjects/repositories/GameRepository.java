@@ -14,5 +14,5 @@ public interface GameRepository extends JpaRepository<Game, Long> {
     @Query("select g.title as title, g.price as price from Game g")
     List<GameTitleAndPriceViewDto> findAllByTitleAndPrice();
 
-    Game findByTitle(String gameTitle);
+    Optional<Game> findByTitle(String gameTitle);
 }

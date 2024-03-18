@@ -1,6 +1,7 @@
 package org.example.springdataautomappingobjects.services;
 
 
+import org.example.springdataautomappingobjects.constants.ValidationsAndMessages;
 import org.example.springdataautomappingobjects.domain.dtos.*;
 import org.example.springdataautomappingobjects.domain.entities.Game;
 import org.example.springdataautomappingobjects.repositories.GameRepository;
@@ -67,7 +68,7 @@ public class GameServiceImpl implements GameService {
     @Override
     public String deleteGame(String[] args) {
 
-        if (this.userService.isUserLogged()) {
+        if (!this.userService.isUserLogged()) {
             return NO_LOGGED_USER;
         }
 
@@ -89,10 +90,11 @@ public class GameServiceImpl implements GameService {
         return String.format(DELETE_GAME_MESSAGE, gameToDeleteTitle);
     }
 
+
     @Override
     public String editGame(String[] args) {
 
-        if (this.userService.isUserLogged()) {
+        if (!this.userService.isUserLogged()) {
             return NO_LOGGED_USER;
         }
 
@@ -165,7 +167,12 @@ public class GameServiceImpl implements GameService {
     public String detailGame(String[] args) {
 
         String gameTitle = args[1];
-        Game game = this.gameRepository.findByTitle(gameTitle);
+        Optional<Game> optionalGame = this.gameRepository.findByTitle(gameTitle);
+
+        if(optionalGame.isEmpty()) {
+            return ValidationsAndMessages.GAME_TITLE_NOT_EXIST;
+        }
+        Game game = optionalGame.get();
         GameDetailDto gameDetailDto = mapper.map(game, GameDetailDto.class);
 
         return gameDetailDto.toString();

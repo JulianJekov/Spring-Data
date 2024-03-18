@@ -58,6 +58,12 @@ public class ConsoleRunner implements CommandLineRunner {
                 case DETAIL_GAME:
                     result = this.gameService.detailGame(inputData);
                     break;
+                case ADD_ITEM:
+                    result = this.userService.addItem(inputData);
+                    break;
+                case DELETE_ITEM:
+                    result = this.userService.removeItem(inputData);
+                    break;
                 default:
                     result = COMMAND_NOT_FOUND_MESSAGE;
                     break;
