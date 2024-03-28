@@ -45,4 +45,5 @@ public class Constellation extends BaseEntity{
     public void setStars(Set<Star> stars) {
         this.stars = stars;
     }
+
 }
