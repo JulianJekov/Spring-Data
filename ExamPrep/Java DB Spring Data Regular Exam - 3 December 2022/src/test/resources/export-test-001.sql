@@ -50,7 +50,7 @@ values  (1, 'lrann0@t-online.de', 'Lorna', 'Rann', '462-463-0432'),
         (23, 'hmccanen@infoseek.co.jp', 'Hanan', 'McCane', '241-738-8061'),
         (24, 'mmarzelleo@squarespace.com', 'Margalo', 'Marzelle', '202-980-7909');
 
-insert into cars (id, car_make, car_model, car_type, engine, kilometers, plate_number, year)
+insert into cars (id, car_make, car_model, car_type, carEngine, carKilometers, plate_number, year)
 values  (1, 'Mitsubishi', 'Tundra', 'SUV', 1.2, 256754, 'JA9315IL', 2009),
         (2, 'Land Rover', 'Range Rover', 'SUV', 2.6, 159069, 'NR9360PI', 1996),
         (3, 'Dodge', 'Intrepid', 'sport', 2.3, 127029, 'OY9924GE', 2001),

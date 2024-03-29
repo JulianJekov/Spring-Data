@@ -5,8 +5,8 @@
         <carModel>Challenger</carModel>
         <year>2010</year>
         <plateNumber>AU3739FZ</plateNumber>
-        <kilometers>226423</kilometers>
-        <engine>1.4</engine>
+        <carKilometers>226423</carKilometers>
+        <carEngine>1.4</carEngine>
         <carType>SUV</carType>
     </car>
     <car>
@@ -14,8 +14,8 @@
         <carModel>Miata MX-5</carModel>
         <year>2005</year>
         <plateNumber>AU3739FZ</plateNumber>
-        <kilometers>267695</kilometers>
-        <engine>2.1</engine>
+        <carKilometers>267695</carKilometers>
+        <carEngine>2.1</carEngine>
         <carType>coupe</carType>
     </car>
 </cars>

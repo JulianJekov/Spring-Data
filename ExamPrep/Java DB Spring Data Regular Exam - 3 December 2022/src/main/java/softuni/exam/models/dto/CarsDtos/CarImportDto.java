@@ -1,46 +1,45 @@
-package softuni.exam.models.entity;
+package softuni.exam.models.dto.CarsDtos;
 
-import javax.persistence.*;
-import java.util.Set;
+import softuni.exam.models.entity.CarType;
 
-@Entity
-@Table(name = "cars")
-public class Car extends BaseEntity{
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 
-    @Column(name = "car_type", nullable = false)
-    @Enumerated(EnumType.STRING)
-    private CarType carType;
+@XmlAccessorType(XmlAccessType.FIELD)
+public class CarImportDto {
 
-    @Column(name = "car_make", nullable = false)
+    @XmlElement(name = "carMake")
+    @Size(min = 2, max = 30)
     private String carMake;
 
-    @Column(name = "car_model", nullable = false)
+    @XmlElement(name = "carModel")
+    @Size(min = 2, max = 30)
     private String carModel;
 
-    @Column(nullable = false)
+    @XmlElement
+    @Positive
     private Integer year;
 
-    @Column(name = "plate_number", nullable = false, unique = true)
+    @XmlElement(name = "plateNumber")
+    @Size(min = 2, max = 30)
     private String plateNumber;
 
-    @Column(nullable = false)
+    @XmlElement
+    @Positive
     private Integer kilometers;
 
-    @Column(nullable = false)
+    @XmlElement
+    @Min(1)
     private Double engine;
 
-    @OneToMany(mappedBy = "car", targetEntity = Task.class, fetch = FetchType.EAGER)
-    private Set<Task> tasks;
+    @XmlElement(name = "carType")
+    private CarType carType;
 
-    public Car() {
-    }
-
-    public CarType getCarType() {
-        return carType;
-    }
-
-    public void setCarType(CarType carType) {
-        this.carType = carType;
+    public CarImportDto() {
     }
 
     public String getCarMake() {
@@ -91,11 +90,16 @@ public class Car extends BaseEntity{
         this.engine = engine;
     }
 
-    public Set<Task> getTasks() {
-        return tasks;
+    public CarType getCarType() {
+        return carType;
     }
 
-    public void setTasks(Set<Task> tasks) {
-        this.tasks = tasks;
+    public void setCarType(CarType carType) {
+        this.carType = carType;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Successfully imported car %s - %s", this.carMake, this.carModel);
     }
 }

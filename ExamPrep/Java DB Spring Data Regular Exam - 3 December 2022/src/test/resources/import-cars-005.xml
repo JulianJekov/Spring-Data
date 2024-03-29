@@ -6,8 +6,8 @@
         <carModel>Camry</carModel>
         <year>2010</year>
         <plateNumber>TO</plateNumber>
-        <kilometers>319292</kilometers>
-        <engine>2.4</engine>
+        <carKilometers>319292</carKilometers>
+        <carEngine>2.4</carEngine>
         <carType>coupe</carType>
     </car>
     <car>
@@ -15,8 +15,8 @@
         <carModel>SL-Class</carModel>
         <year>1993</year>
         <plateNumber>MD9630WKISverylongbutItIsvalid</plateNumber>
-        <kilometers>86912</kilometers>
-        <engine>2.5</engine>
+        <carKilometers>86912</carKilometers>
+        <carEngine>2.5</carEngine>
         <carType>coupe</carType>
     </car>
     <car>
@@ -24,8 +24,8 @@
         <carModel>Grand Prix</carModel>
         <year>1981</year>
         <plateNumber>X</plateNumber>
-        <kilometers>260628</kilometers>
-        <engine>2.4</engine>
+        <carKilometers>260628</carKilometers>
+        <carEngine>2.4</carEngine>
         <carType>coupe</carType>
     </car>
     <car>
@@ -33,8 +33,8 @@
         <carModel>Challenger</carModel>
         <year>2010</year>
         <plateNumber>MD9630WKISverylongAndISNOTValid</plateNumber>
-        <kilometers>226423</kilometers>
-        <engine>1.4</engine>
+        <carKilometers>226423</carKilometers>
+        <carEngine>1.4</carEngine>
         <carType>SUV</carType>
     </car>
 </cars>

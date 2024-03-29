@@ -149,7 +149,7 @@ values  (1, 'lrann0@t-online.de', 'Lorna', 'Rann', '462-463-0432'),
         (98, 'rfurminger2q@house.gov', 'Raphaela', 'Furminger', '638-171-8744'),
         (99, 'psmallwood2r@prweb.com', 'Pia', 'Smallwood', '222-452-8521');
 
-insert into cars (id, car_make, car_model, car_type, engine, kilometers, plate_number, year)
+insert into cars (id, car_make, car_model, car_type, carEngine, carKilometers, plate_number, year)
 values  (1, 'Mitsubishi', 'Tundra', 'SUV', 1.2, 256754, 'JA9315IL', 2009),
         (2, 'Land Rover', 'Range Rover', 'SUV', 2.6, 159069, 'NR9360PI', 1996),
         (3, 'Dodge', 'Intrepid', 'sport', 2.3, 127029, 'OY9924GE', 2001),

@@ -5,8 +5,8 @@
         <carModel>Ca</carModel>
         <year>2010</year>
         <plateNumber>TO1407ZT</plateNumber>
-        <kilometers>319292</kilometers>
-        <engine>2.4</engine>
+        <carKilometers>319292</carKilometers>
+        <carEngine>2.4</carEngine>
         <carType>coupe</carType>
     </car>
     <car>
@@ -14,8 +14,8 @@
         <carModel>SL-Class is correct and is OOK</carModel>
         <year>1993</year>
         <plateNumber>MD9630WK</plateNumber>
-        <kilometers>86912</kilometers>
-        <engine>2.5</engine>
+        <carKilometers>86912</carKilometers>
+        <carEngine>2.5</carEngine>
         <carType>coupe</carType>
     </car>
     <car>
@@ -23,8 +23,8 @@
         <carModel>G</carModel>
         <year>1981</year>
         <plateNumber>JK1993AO</plateNumber>
-        <kilometers>260628</kilometers>
-        <engine>2.4</engine>
+        <carKilometers>260628</carKilometers>
+        <carEngine>2.4</carEngine>
         <carType>coupe</carType>
     </car>
     <car>
@@ -32,8 +32,8 @@
         <carModel>SL-Class is not correctAndThrow</carModel>
         <year>2010</year>
         <plateNumber>AU3739FZ</plateNumber>
-        <kilometers>226423</kilometers>
-        <engine>1.4</engine>
+        <carKilometers>226423</carKilometers>
+        <carEngine>1.4</carEngine>
         <carType>SUV</carType>
     </car>
 </cars>

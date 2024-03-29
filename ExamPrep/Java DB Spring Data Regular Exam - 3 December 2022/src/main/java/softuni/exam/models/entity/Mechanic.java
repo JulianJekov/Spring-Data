@@ -1,8 +1,7 @@
 package softuni.exam.models.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "mechanics")
@@ -19,6 +18,9 @@ public class Mechanic extends BaseEntity{
 
     @Column(unique = true)
     private String phone;
+
+    @OneToMany(mappedBy = "mechanic", targetEntity = Task.class, fetch = FetchType.EAGER)
+    private Set<Task> tasks;
 
     public Mechanic() {
     }
@@ -53,5 +55,13 @@ public class Mechanic extends BaseEntity{
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public Set<Task> getTasks() {
+        return tasks;
+    }
+
+    public void setTasks(Set<Task> tasks) {
+        this.tasks = tasks;
     }
 }

@@ -1,9 +1,6 @@
 package softuni.exam.models.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity
@@ -18,6 +15,9 @@ public class Part extends BaseEntity{
 
     @Column(nullable = false)
     private Integer quantity;
+
+    @OneToMany(mappedBy = "part", targetEntity = Task.class, fetch = FetchType.EAGER)
+    private Set<Task> task;
 
     public Part() {
     }
@@ -44,5 +44,13 @@ public class Part extends BaseEntity{
 
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
+    }
+
+    public Set<Task> getTask() {
+        return task;
+    }
+
+    public void setTask(Set<Task> task) {
+        this.task = task;
     }
 }
