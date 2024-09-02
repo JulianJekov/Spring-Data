@@ -65,3 +65,5 @@ By the end of this course, you will be able to:
 - Implement robust CRUD operations and advanced queries using Spring Data
 - Handle JSON and XML data formats in Java applications
 - Build a service layer and repository pattern for complex Java applications
+
+![Spring Data - February 2024 - Certificate](https://github.com/user-attachments/assets/e6fdefc7-9c0f-4e14-b9ae-17f554007aaa)
